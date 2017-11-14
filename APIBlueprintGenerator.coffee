@@ -110,7 +110,7 @@ APIBlueprintGenerator = ->
       method: paw_request.method,
       path: @path(url),
       request: @request(paw_request),
-      response: paw_request.getAllExchanges().map (r) -> that.response(r),
+      response: paw_request.getAllExchanges().reverse().map (r) -> that.response(r),
     )
 
   return
